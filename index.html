@@ -9,16 +9,16 @@
         bge('init', "903215497283147264");
     </script>
     <script async src="https://api.imotech.video/ad/events.js?pixel_id=903215497283147264"></script>
+</head>
+<body>
     <script>
         function bge_ec_detail_view() {
             bge('event', 'ec_detail_view');
         }
-        function bge_ec_order() {
-            bge('event', 'ec_order');
-        }
     </script>
-</head>
-<body>
-    <div style="width: 500px; height: 100px; background-color: bisque;"></div>
+    function bge_ec_order() {
+        bge('event', 'ec_order');
+    }
+<div style="width: 500px; height: 100px; background-color: bisque;"></div>
 </body>
 </html>
