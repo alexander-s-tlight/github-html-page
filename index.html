@@ -7,15 +7,16 @@
         window.bgdataLayer = window.bgdataLayer || [];
         function bge(){bgdataLayer.push(arguments);}
         bge('init', "903215497283147264");
+        function bge_ec_detail_view() {
+            bge('event', 'ec_detail_view');
+        }
+        bge('event', 'ec_order');
     </script>
     <script async src="https://api.imotech.video/ad/events.js?pixel_id=903215497283147264"></script>
 </head>
 <body>
     <script>
-        function bge_ec_detail_view() {
-            bge('event', 'ec_detail_view');
-        }
-        bge('event', 'ec_order');
+        bge_ec_detail_view();
     </script>
 <div style="width: 500px; height: 100px; background-color: bisque;"></div>
 </body>
